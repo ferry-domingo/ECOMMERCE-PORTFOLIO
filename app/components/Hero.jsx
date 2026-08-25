@@ -9,8 +9,9 @@ export default function Hero() {
       </div>
       <div className="hero-stage hero-enter hero-delay-2" aria-label="Animated preview of featured ecommerce work">
         <div className="orbit orbit-one" /><div className="orbit orbit-two" />
-        <div className="hero-card card-back"><small>03 / KAPEHAUS</small><strong>Good coffee.<br />Great days.</strong></div>
-        <div className="hero-card card-front"><div className="card-nav"><b>LUNA</b><span>NEW&nbsp;&nbsp; SHOP&nbsp;&nbsp; EDITORIAL</span><i>BAG 0</i></div><div className="card-art"><small>THE NEW EDIT</small><strong>Quiet luxury,<br /><em>made wearable.</em></strong><div className="fashion-form" /></div></div>
+        <a className="hero-project-card hero-kape" href="https://kapehaus.vercel.app/" target="_blank" rel="noreferrer" aria-label="Open Kapehaus project"><span>03 / KAPEHAUS</span><img src="/projects/kapehaus.png" alt="Kapehaus website preview" /></a>
+        <a className="hero-project-card hero-noire" href="https://noire-men.vercel.app/" target="_blank" rel="noreferrer" aria-label="Open Noire Men project"><span>02 / NOIRÉ MEN</span><img src="/projects/noire.png" alt="Noire Men website preview" /></a>
+        <a className="hero-project-card hero-luna" href="https://luna-fashion-ten.vercel.app/" target="_blank" rel="noreferrer" aria-label="Open Luna Fashion project"><span>01 / LUNA FASHION</span><img src="/projects/luna.png" alt="Luna Fashion website preview" /></a>
         <div className="floating-pill"><span>Selected work</span><strong>03 projects</strong></div>
       </div>
       <div className="hero-footer"><span>Philippines · Available worldwide</span><a href="#about">Scroll to discover <i>↓</i></a></div>
