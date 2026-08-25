@@ -23,3 +23,13 @@
 .noire .project-scene::after{content:"NOIRE";position:absolute;inset:auto 0 24px;text-align:center;color:#fff;font:800 clamp(38px,5vw,66px)/1 var(--font-manrope);letter-spacing:10px;text-shadow:0 3px 25px rgba(0,0,0,.5)}
 .noire .project-scene>img{filter:grayscale(1) contrast(1.08);object-position:center 25%}
 .scene-cta{color:var(--ink)}
+
+/* Keep every project preview at one 16:9 size and preserve its brand lockup. */
+.project-scene{height:auto!important;aspect-ratio:16/9}
+.project-scene>img{object-fit:cover!important;object-position:center!important}
+.luna .project-scene>img,.kape .project-scene>img{object-fit:contain!important}
+.luna .project-scene{background:#eee6d9}
+.kape .project-scene{background:#3d2c22}
+.noire .project-scene::after{content:"NOIRÉ MEN";inset:auto 0 22px;font-size:clamp(31px,5vw,62px);letter-spacing:8px}
+.noire .project-scene>img{filter:grayscale(1) contrast(1.08)!important;object-position:68% center!important}
+@media(max-width:600px){.project-scene{height:auto}.noire .project-scene::after{bottom:16px;font-size:30px;letter-spacing:5px}}

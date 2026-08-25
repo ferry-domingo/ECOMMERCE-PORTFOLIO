@@ -1,6 +1,6 @@
 const projects = [
   { name: "Luna Fashion", category: "Women’s fashion", url: "https://luna-fashion-ten.vercel.app/", image: "/projects/luna.png", description: "An editorial fashion storefront pairing confident art direction with a clear, modern shopping journey.", features: ["Editorial landing page", "Curated collections", "Responsive storefront"], theme: "luna" },
-  { name: "Noire Men", category: "Menswear store", url: "https://noire-men.vercel.app/", image: "/projects/noire.jpg", description: "A sharp menswear experience built around bold typography, premium presentation, and effortless product discovery.", features: ["Premium visual system", "Product browsing", "Mobile-first design"], theme: "noire" },
+  { name: "Noire Men", category: "Menswear store", url: "https://noire-men.vercel.app/", image: "/projects/noire.png", description: "A sharp menswear experience built around bold typography, premium presentation, and effortless product discovery.", features: ["Premium visual system", "Product browsing", "Mobile-first design"], theme: "noire" },
   { name: "Kapehaus", category: "Coffee & lifestyle", url: "https://kapehaus.vercel.app/", image: "/projects/kapehaus.png", description: "A warm coffee brand website that turns a local café identity into an inviting digital experience.", features: ["Brand storytelling", "Menu showcase", "Conversion-focused CTAs"], theme: "kape" },
 ];
 
