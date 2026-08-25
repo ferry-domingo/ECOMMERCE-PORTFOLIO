@@ -1,35 +1,29 @@
 const projects = [
-  { name: "Luna Fashion", category: "Fashion E-commerce", description: "A refined clothing store with an editorial feel and frictionless shopping experience.", features: ["Product catalog", "Categories", "Product details", "Cart"], tech: ["Next.js", "Tailwind CSS", "JavaScript"], theme: "luna" },
-  { name: "Aura Skin", category: "Beauty & Skincare", description: "A premium product showcase designed to build trust and turn curiosity into orders.", features: ["Product showcase", "Testimonials", "Responsive design", "Order buttons"], tech: ["React", "Tailwind CSS", "JavaScript"], theme: "aura" },
-  { name: "Brew & Bite", category: "Cafe & Food", description: "A warm, modern cafe website that makes the menu easy to explore and orders effortless.", features: ["Menu", "Product cards", "Order CTA", "Location section"], tech: ["Next.js", "Tailwind CSS", "Vercel"], theme: "brew" },
+  { name: "Luna Fashion", category: "Women’s fashion", url: "https://luna-fashion-ten.vercel.app/", description: "An editorial fashion storefront pairing confident art direction with a clear, modern shopping journey.", features: ["Editorial landing page", "Curated collections", "Responsive storefront"], theme: "luna", label: "LUNA / FASHION" },
+  { name: "Noire Men", category: "Menswear store", url: "https://noire-men.vercel.app/", description: "A sharp menswear experience built around bold typography, premium presentation, and effortless product discovery.", features: ["Premium visual system", "Product browsing", "Mobile-first design"], theme: "noire", label: "NOIRE / MEN" },
+  { name: "Kapehaus", category: "Coffee & lifestyle", url: "https://kapehaus.vercel.app/", description: "A warm coffee brand website that turns a local café identity into an inviting digital experience.", features: ["Brand storytelling", "Menu showcase", "Conversion-focused CTAs"], theme: "kape", label: "KAPE / HAUS" },
 ];
 
-function ProjectMockup({ project }) {
+function ProjectVisual({ project, number }) {
   return (
-    <div className={`project-mockup ${project.theme}`}>
-      <div className="mock-window"><div className="mock-bar"><span /><span /><span /></div>
-        {project.theme === "luna" && <><div className="mock-nav">LUNA <small>NEW&nbsp;&nbsp; SHOP&nbsp;&nbsp; JOURNAL</small><i>BAG 0</i></div><div className="luna-scene"><p>THE NEW<br /><b>EVERYDAY</b></p><div className="fashion-figure" /></div></>}
-        {project.theme === "aura" && <><div className="mock-nav">aura° <small>SHOP&nbsp;&nbsp; ABOUT&nbsp;&nbsp; RITUALS</small><i>○</i></div><div className="aura-scene"><div className="skin-bottle">AURA<br /><small>DAILY DEW</small></div><p>Glow begins<br />with good care.<button>SHOP THE RITUAL</button></p></div></>}
-        {project.theme === "brew" && <><div className="mock-nav">BREW<br />& BITE <small>MENU&nbsp;&nbsp; OUR STORY&nbsp;&nbsp; VISIT</small><i>ORDER</i></div><div className="brew-scene"><div className="coffee-cup">B&B</div><p>GOOD DAYS<br /><b>START HERE.</b></p></div></>}
+    <a className={`project-visual ${project.theme}`} href={project.url} target="_blank" rel="noreferrer" aria-label={`Open ${project.name} live website`}>
+      <div className="project-browser">
+        <div className="browser-bar"><span /><span /><span /><small>{project.url.replace("https://", "")}</small></div>
+        <div className="project-scene"><span className="scene-index">{number}</span><p>{project.label}</p><div className="scene-object" /><span className="scene-cta">Visit website ↗</span></div>
       </div>
-    </div>
+    </a>
   );
 }
 
 export default function Projects() {
   return (
     <section id="projects" className="section projects container">
-      <div className="section-heading"><div className="section-label"><span>03</span> Selected work</div><h2>Projects built with purpose<br />and <em>personality.</em></h2></div>
+      <div className="section-heading reveal-on-scroll"><div className="section-label"><span>03</span> Selected work</div><h2>Three brands.<br />Three distinct <em>worlds.</em></h2></div>
       <div className="projects-list">
         {projects.map((project, index) => (
-          <article className="project-card" key={project.name}>
-            <ProjectMockup project={project} />
-            <div className="project-details">
-              <div className="project-number">0{index + 1} / 03</div><small>{project.category}</small><h3>{project.name}</h3><p>{project.description}</p>
-              <ul>{project.features.map((feature) => <li key={feature}>{feature}</li>)}</ul>
-              <div className="tech-list">{project.tech.map((item) => <span key={item}>{item}</span>)}</div>
-              <div className="project-actions"><a className="button button-primary" href="#" aria-label={`${project.name} live demo`}>Live demo ↗</a><a className="button button-secondary" href="#" aria-label={`${project.name} source code`}>View code ↗</a></div>
-            </div>
+          <article className="project-card reveal-on-scroll" key={project.name}>
+            <ProjectVisual project={project} number={`0${index + 1}`} />
+            <div className="project-details"><div className="project-number">0{index + 1} / 03</div><small>{project.category}</small><h3>{project.name}</h3><p>{project.description}</p><ul>{project.features.map((feature) => <li key={feature}>{feature}</li>)}</ul><a className="project-link" href={project.url} target="_blank" rel="noreferrer">Explore live project <span>↗</span></a></div>
           </article>
         ))}
       </div>

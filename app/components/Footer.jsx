@@ -1,3 +1,3 @@
 export default function Footer() {
-  return <footer><div className="container footer-inner"><a className="logo" href="#home">AM<span>.</span></a><p>Building thoughtful digital storefronts for growing brands.</p><span>© {new Date().getFullYear()} Alex Morgan</span><a href="#home">Back to top ↑</a></div></footer>;
+  return <footer><div className="container footer-inner"><a className="logo" href="#home">LFD<span>.</span></a><p>Thoughtful digital storefronts for ambitious brands.</p><span>© {new Date().getFullYear()} Lovely Ferry Domingo</span><a href="#home">Back to top ↑</a></div></footer>;
 }

@@ -8,7 +8,7 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="section section-dark">
-      <div className="container">
+      <div className="container reveal-on-scroll">
         <div className="section-heading light"><div className="section-label"><span>02</span> What I do</div><h2>Services designed to move your business <em>forward.</em></h2></div>
         <div className="services-grid">
           {services.map(([number, title, description]) => (
