@@ -33,3 +33,7 @@
 .noire .project-scene::after{content:"NOIRÉ MEN";inset:auto 0 22px;font-size:clamp(31px,5vw,62px);letter-spacing:8px}
 .noire .project-scene>img{filter:grayscale(1) contrast(1.08)!important;object-position:68% center!important}
 @media(max-width:600px){.project-scene{height:auto}.noire .project-scene::after{bottom:16px;font-size:30px;letter-spacing:5px}}
+
+/* Keep the alternating Noire preview as large as the other project images. */
+.project-card:nth-child(even){grid-template-columns:.65fr 1.35fr}
+@media(max-width:900px){.project-card:nth-child(even){grid-template-columns:1fr}}
