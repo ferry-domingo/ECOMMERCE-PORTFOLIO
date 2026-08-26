@@ -47,17 +47,22 @@
 .hero-project-card{position:absolute;display:block;background:#f8f6f1;padding:10px 10px 12px;box-shadow:0 30px 65px rgba(22,20,15,.24);overflow:hidden;transition:transform .45s cubic-bezier(.2,.8,.2,1),z-index 0s}
 .hero-project-card span{display:block;height:24px;font-size:7px;font-weight:800;letter-spacing:1.4px;color:#777;text-transform:uppercase;padding:4px 3px}
 .hero-project-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.hero-brand{position:absolute;z-index:3;left:18px;bottom:19px;color:#fff;font:800 18px/1 var(--font-manrope);letter-spacing:2px;text-shadow:0 3px 16px rgba(0,0,0,.8)}.hero-brand em{font-style:normal}
 .hero-project-card:hover{z-index:10}
-.hero-moto{width:300px;right:-8px;top:-15px;background:#b51620;transform:rotate(9deg)}
+.hero-moto{width:285px;right:-4px;top:-12px;background:#b51620;transform:rotate(8deg)}
 .hero-moto span{color:#fff}.hero-moto img{filter:contrast(1.08)}.hero-moto:hover{transform:rotate(6deg) translateY(-9px)}
-.hero-kape{width:320px;right:25px;top:58px;background:#332b26;transform:rotate(7deg)}
+.hero-moto .hero-brand{left:auto;right:17px;color:#fff;font-style:italic}.hero-moto .hero-brand em{color:#ff3039}
+.hero-kape{width:300px;right:30px;top:73px;background:#332b26;transform:rotate(5deg)}
 .hero-kape span{color:#e9ded2}.hero-kape:hover{transform:rotate(4deg) translateY(-9px)}
-.hero-noire{width:375px;right:5px;top:122px;background:#171817;transform:rotate(2deg)}
+.hero-kape .hero-brand{left:auto;right:17px;color:#f0d9b5;font:700 16px/1 Georgia,serif;letter-spacing:3px}
+.hero-noire{width:350px;right:-2px;top:158px;background:#171817;transform:rotate(1deg)}
 .hero-noire span{color:#e9e9e5}.hero-noire img{filter:grayscale(1)}.hero-noire:hover{transform:rotate(0) translate(7px,-9px)}
-.hero-luna{width:455px;left:0;top:70px;transform:rotate(-3deg);animation:heroCardFloat 5s ease-in-out infinite}
+.hero-noire .hero-brand{left:auto;right:17px;font-size:15px;letter-spacing:4px}.hero-noire .hero-brand em{font-weight:400}
+.hero-luna{width:420px;left:-5px;top:105px;transform:rotate(-3deg);animation:heroCardFloat 5s ease-in-out infinite}
+.hero-luna .hero-brand{font:400 24px/1 Georgia,serif;letter-spacing:6px}
 .hero-luna:hover{transform:rotate(-1deg) translateY(-10px)}
 @keyframes heroCardFloat{0%,100%{transform:rotate(-3deg) translateY(0)}50%{transform:rotate(-2deg) translateY(-8px)}}
-@media(max-width:600px){.hero-moto{width:195px;right:-2px;top:-6px}.hero-kape{width:210px;top:42px}.hero-noire{width:245px;top:110px}.hero-luna{width:305px;top:62px}.hero-project-card{padding:7px 7px 9px}.hero-project-card span{height:20px;font-size:6px}.floating-pill{z-index:12}.moto-wordmark{left:16px;bottom:14px}.moto-wordmark::before{width:30px;height:3px;margin-bottom:8px;box-shadow:9px 0 0 rgba(239,32,42,.55)}.moto-wordmark strong{font-size:27px;letter-spacing:-2px}.moto-wordmark small{margin-top:7px;font-size:5px;letter-spacing:1.4px}}
+@media(max-width:600px){.hero-moto{width:44%;right:0;top:-2%}.hero-kape{width:47%;right:4%;top:13%}.hero-noire{width:54%;right:0;top:31%}.hero-luna{width:67%;left:0;top:20%}.hero-project-card{padding:7px 7px 9px}.hero-project-card span{height:20px;font-size:6px}.hero-brand{left:11px;bottom:12px;font-size:10px;letter-spacing:1.2px}.hero-moto .hero-brand,.hero-kape .hero-brand,.hero-noire .hero-brand{right:10px}.hero-kape .hero-brand,.hero-noire .hero-brand{font-size:9px;letter-spacing:1.5px}.hero-luna .hero-brand{font-size:13px;letter-spacing:3px}.floating-pill{z-index:12}.moto-wordmark{left:16px;bottom:14px}.moto-wordmark::before{width:30px;height:3px;margin-bottom:8px;box-shadow:9px 0 0 rgba(239,32,42,.55)}.moto-wordmark strong{font-size:27px;letter-spacing:-2px}.moto-wordmark small{margin-top:7px;font-size:5px;letter-spacing:1.4px}}
 
 /* Section-specific ambient background motion */
 .about,.section-dark,.projects,.skills,.contact{position:relative;isolation:isolate;overflow:hidden}
@@ -91,3 +96,4 @@ html{scroll-padding-top:78px}body{min-width:280px}.container{width:min(1200px,ca
 @media(max-height:520px) and (orientation:landscape){.nav{height:62px}.nav-links{top:62px;max-height:calc(100dvh - 62px);padding-block:18px;gap:18px}.hero{padding-top:92px}.hero-stage{max-height:78vh}}
 @media(hover:none){.service-card:hover,.project-visual:hover,.button-primary:hover,.button-secondary:hover{transform:none}.service-card:hover{color:inherit}.service-card:hover::before{height:0}.service-card:hover .service-top,.service-card:hover p{color:#aaaca5}.scene-cta{opacity:1;transform:none}}
 @media(max-width:600px){.hero-moto{width:45%;right:0;top:-2%}.hero-kape{width:49%;right:3%;top:10%}.hero-noire{top:27%}.hero-luna{top:16%}}
+@media(max-width:600px){.hero-moto{width:44%;top:-2%}.hero-kape{width:47%;right:4%;top:13%}.hero-noire{width:54%;top:31%}.hero-luna{width:67%;left:0;top:20%}}
