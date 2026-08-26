@@ -17,7 +17,8 @@
 /* Real project artwork */
 .project-scene{padding:0;background:#171815}
 .project-visual.moto{background:#c3262d}
-.moto .project-scene::after{content:"MOTODRIVE";position:absolute;left:50%;bottom:25px;z-index:2;transform:translateX(-50%);color:#fff;font:800 clamp(31px,5vw,62px)/1 var(--font-manrope);letter-spacing:7px;text-shadow:0 4px 28px rgba(0,0,0,.75)}
+.moto-wordmark{position:absolute;left:24px;bottom:24px;z-index:2;display:flex;flex-direction:column;align-items:flex-start;background:rgba(8,8,8,.88);color:#fff;padding:14px 18px 13px;border-left:4px solid #e3242b;box-shadow:0 14px 35px rgba(0,0,0,.35);backdrop-filter:blur(8px)}
+.moto-wordmark strong{font:900 clamp(27px,3.7vw,48px)/.82 var(--font-manrope);letter-spacing:-2px;font-style:italic}.moto-wordmark strong em{color:#ef2832;font-style:inherit}.moto-wordmark small{margin-top:9px;color:rgba(255,255,255,.72);font-size:7px;font-weight:800;text-transform:uppercase;letter-spacing:2.2px}
 .project-scene>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .5s}
 .project-visual:hover .project-scene>img{transform:scale(1.035)}
 .scene-index{position:absolute;left:18px;top:18px;z-index:3;background:rgba(255,255,255,.9);color:var(--ink);padding:8px 10px}
@@ -54,7 +55,7 @@
 .hero-luna{width:455px;left:0;top:70px;transform:rotate(-3deg);animation:heroCardFloat 5s ease-in-out infinite}
 .hero-luna:hover{transform:rotate(-1deg) translateY(-10px)}
 @keyframes heroCardFloat{0%,100%{transform:rotate(-3deg) translateY(0)}50%{transform:rotate(-2deg) translateY(-8px)}}
-@media(max-width:600px){.hero-moto{width:195px;right:-2px;top:-6px}.hero-kape{width:210px;top:42px}.hero-noire{width:245px;top:110px}.hero-luna{width:305px;top:62px}.hero-project-card{padding:7px 7px 9px}.hero-project-card span{height:20px;font-size:6px}.floating-pill{z-index:12}.moto .project-scene::after{bottom:16px;font-size:28px;letter-spacing:4px}}
+@media(max-width:600px){.hero-moto{width:195px;right:-2px;top:-6px}.hero-kape{width:210px;top:42px}.hero-noire{width:245px;top:110px}.hero-luna{width:305px;top:62px}.hero-project-card{padding:7px 7px 9px}.hero-project-card span{height:20px;font-size:6px}.floating-pill{z-index:12}.moto-wordmark{left:12px;bottom:12px;padding:10px 12px 9px;border-left-width:3px}.moto-wordmark strong{font-size:24px;letter-spacing:-1px}.moto-wordmark small{margin-top:6px;font-size:5px;letter-spacing:1.2px}}
 
 /* Section-specific ambient background motion */
 .about,.section-dark,.projects,.skills,.contact{position:relative;isolation:isolate;overflow:hidden}

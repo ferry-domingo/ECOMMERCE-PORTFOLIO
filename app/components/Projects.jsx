@@ -6,7 +6,7 @@ const projects = [
 ];
 
 function ProjectVisual({ project, number }) {
-  return <a className={`project-visual ${project.theme}`} href={project.url} target="_blank" rel="noreferrer" aria-label={`Open ${project.name} live website`}><div className="project-browser"><div className="browser-bar"><span /><span /><span /><small>{project.url.replace("https://", "")}</small></div><div className="project-scene"><img src={project.image} alt={`${project.name} website preview`} /><span className="scene-index">{number}</span><span className="scene-cta">Visit website ↗</span></div></div></a>;
+  return <a className={`project-visual ${project.theme}`} href={project.url} target="_blank" rel="noreferrer" aria-label={`Open ${project.name} live website`}><div className="project-browser"><div className="browser-bar"><span /><span /><span /><small>{project.url.replace("https://", "")}</small></div><div className="project-scene"><img src={project.image} alt={`${project.name} website preview`} /><span className="scene-index">{number}</span>{project.theme === "moto" && <div className="moto-wordmark" aria-hidden="true"><strong>MOTO<em>DRIVE</em></strong><small>Ride your next adventure</small></div>}<span className="scene-cta">Visit website ↗</span></div></div></a>;
 }
 
 export default function Projects() {
