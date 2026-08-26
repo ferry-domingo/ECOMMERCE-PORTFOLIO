@@ -16,6 +16,7 @@
 
 /* Real project artwork */
 .project-scene{padding:0;background:#171815}
+.project-visual.moto{background:#c3262d}
 .project-scene>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .5s}
 .project-visual:hover .project-scene>img{transform:scale(1.035)}
 .scene-index{position:absolute;left:18px;top:18px;z-index:3;background:rgba(255,255,255,.9);color:var(--ink);padding:8px 10px}
