@@ -17,6 +17,7 @@
 /* Real project artwork */
 .project-scene{padding:0;background:#171815}
 .project-visual.moto{background:#c3262d}
+.project-visual.amara{background:#b99b68}
 .moto .project-scene::before{content:"";position:absolute;inset:auto 0 0;height:48%;z-index:1;background:linear-gradient(0deg,rgba(0,0,0,.9),rgba(0,0,0,.45) 55%,transparent);pointer-events:none}
 .moto-wordmark{position:absolute;left:28px;bottom:24px;z-index:2;display:flex;flex-direction:column;align-items:flex-start;color:#fff;text-shadow:0 5px 24px rgba(0,0,0,.8)}
 .moto-wordmark::before{content:"";width:46px;height:4px;margin-bottom:11px;background:#ef202a;transform:skewX(-28deg);box-shadow:13px 0 0 rgba(239,32,42,.55)}
@@ -49,6 +50,8 @@
 .hero-project-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
 .hero-brand{position:absolute;z-index:3;left:18px;bottom:19px;color:#fff;font:800 18px/1 var(--font-manrope);letter-spacing:2px;text-shadow:0 3px 16px rgba(0,0,0,.8)}.hero-brand em{font-style:normal}
 .hero-project-card:hover{z-index:10}
+.hero-amara{width:305px;left:18px;top:-24px;background:#b99b68;transform:rotate(-7deg)}
+.hero-amara span{color:#fff}.hero-amara:hover{transform:rotate(-5deg) translateY(-9px)}
 .hero-moto{width:285px;right:-4px;top:-12px;background:#b51620;transform:rotate(8deg)}
 .hero-moto span{color:#fff}.hero-moto img{filter:contrast(1.08)}.hero-moto:hover{transform:rotate(6deg) translateY(-9px)}
 .hero-moto .hero-brand{left:auto;right:17px;color:#fff;font-style:italic}.hero-moto .hero-brand em{color:#ff3039}
@@ -62,7 +65,7 @@
 .hero-luna .hero-brand{font:400 24px/1 Georgia,serif;letter-spacing:6px}
 .hero-luna:hover{transform:rotate(-1deg) translateY(-10px)}
 @keyframes heroCardFloat{0%,100%{transform:rotate(-3deg) translateY(0)}50%{transform:rotate(-2deg) translateY(-8px)}}
-@media(max-width:600px){.hero-moto{width:44%;right:0;top:-2%}.hero-kape{width:47%;right:4%;top:13%}.hero-noire{width:54%;right:0;top:31%}.hero-luna{width:67%;left:0;top:20%}.hero-project-card{padding:7px 7px 9px}.hero-project-card span{height:20px;font-size:6px}.hero-brand{left:11px;bottom:12px;font-size:10px;letter-spacing:1.2px}.hero-moto .hero-brand,.hero-kape .hero-brand,.hero-noire .hero-brand{right:10px}.hero-kape .hero-brand,.hero-noire .hero-brand{font-size:9px;letter-spacing:1.5px}.hero-luna .hero-brand{font-size:13px;letter-spacing:3px}.floating-pill{z-index:12}.moto-wordmark{left:16px;bottom:14px}.moto-wordmark::before{width:30px;height:3px;margin-bottom:8px;box-shadow:9px 0 0 rgba(239,32,42,.55)}.moto-wordmark strong{font-size:27px;letter-spacing:-2px}.moto-wordmark small{margin-top:7px;font-size:5px;letter-spacing:1.4px}}
+@media(max-width:600px){.hero-amara{width:48%;left:3%;top:-3%}.hero-moto{width:44%;right:0;top:-2%}.hero-kape{width:47%;right:4%;top:13%}.hero-noire{width:54%;right:0;top:31%}.hero-luna{width:67%;left:0;top:20%}.hero-project-card{padding:7px 7px 9px}.hero-project-card span{height:20px;font-size:6px}.hero-brand{left:11px;bottom:12px;font-size:10px;letter-spacing:1.2px}.hero-moto .hero-brand,.hero-kape .hero-brand,.hero-noire .hero-brand{right:10px}.hero-kape .hero-brand,.hero-noire .hero-brand{font-size:9px;letter-spacing:1.5px}.hero-luna .hero-brand{font-size:13px;letter-spacing:3px}.floating-pill{z-index:12}.moto-wordmark{left:16px;bottom:14px}.moto-wordmark::before{width:30px;height:3px;margin-bottom:8px;box-shadow:9px 0 0 rgba(239,32,42,.55)}.moto-wordmark strong{font-size:27px;letter-spacing:-2px}.moto-wordmark small{margin-top:7px;font-size:5px;letter-spacing:1.4px}}
 
 /* Section-specific ambient background motion */
 .about,.section-dark,.projects,.skills,.contact{position:relative;isolation:isolate;overflow:hidden}
@@ -97,3 +100,7 @@ html{scroll-padding-top:78px}body{min-width:280px}.container{width:min(1200px,ca
 @media(hover:none){.service-card:hover,.project-visual:hover,.button-primary:hover,.button-secondary:hover{transform:none}.service-card:hover{color:inherit}.service-card:hover::before{height:0}.service-card:hover .service-top,.service-card:hover p{color:#aaaca5}.scene-cta{opacity:1;transform:none}}
 @media(max-width:600px){.hero-moto{width:45%;right:0;top:-2%}.hero-kape{width:49%;right:3%;top:10%}.hero-noire{top:27%}.hero-luna{top:16%}}
 @media(max-width:600px){.hero-moto{width:44%;top:-2%}.hero-kape{width:47%;right:4%;top:13%}.hero-noire{width:54%;top:31%}.hero-luna{width:67%;left:0;top:20%}}
+
+/* Keep the hero location label clear of the CTA buttons. */
+.hero-footer{bottom:8px;z-index:6;align-items:center;font-size:10px;font-weight:700;letter-spacing:1.5px;color:#4d5048}
+.hero-footer>span{padding:5px 12px 5px 0;background:var(--paper)}
